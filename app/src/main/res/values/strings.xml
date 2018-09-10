@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Supercharge Test App</string>
+    <string name="go_button">Go</string>
+    <string name="search_movie">Search for a movie</string>
+    <string name="welcome_text">Super Movie Database</string>
+    <string name="welcome_subtext">For all your analytical needs</string>
 </resources>
