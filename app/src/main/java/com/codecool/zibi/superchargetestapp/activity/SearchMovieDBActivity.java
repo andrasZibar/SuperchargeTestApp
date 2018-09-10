@@ -3,7 +3,6 @@ package com.codecool.zibi.superchargetestapp.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.widget.TextView;
 
 import com.codecool.zibi.superchargetestapp.R;
@@ -36,16 +35,20 @@ public class SearchMovieDBActivity extends AppCompatActivity {
         try {
             JSONObject[] searchResults = (JSONObject[]) jsonReader.getJson(searchURL).get("results");
             List<Integer> allMovieIdsFromSearch = new ArrayList<>();
-
-            for (int i = 0; i < searchResults.length; i++) {
-                allMovieIdsFromSearch.add(searchResults[i].getInt("id"));
-            }
-
-            List<JSONObject> allMoviesFromSearch = getAllMoviesByIds(allMovieIdsFromSearch);
-
             TextView textView = findViewById(R.id.textView2);
-            textView.setText(allMoviesFromSearch.toString());
 
+
+            if (searchResults == null){
+                textView.setText("Something went wrong, sorry");
+            } else {
+                for (int i = 0; i < searchResults.length; i++) {
+                    allMovieIdsFromSearch.add(searchResults[i].getInt("id"));
+                }
+
+                List<JSONObject> allMoviesFromSearch = getAllMoviesByIds(allMovieIdsFromSearch);
+
+                textView.setText(allMoviesFromSearch.toString());
+            }
         } catch (JSONException e) {
             String error = "Something went wrong, sorry.";
 
