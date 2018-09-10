@@ -1,7 +1,9 @@
-package com.codecool.zibi.superchargetestapp;
+package com.codecool.zibi.superchargetestapp.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.codecool.zibi.superchargetestapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
