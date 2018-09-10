@@ -48,6 +48,10 @@ public class SearchMovieDBActivity extends AppCompatActivity {
 
         } catch (JSONException e) {
             String error = "Something went wrong, sorry.";
+
+            TextView textView = findViewById(R.id.textView2);
+            textView.setText(error);
+
             e.printStackTrace();
         }
     }
