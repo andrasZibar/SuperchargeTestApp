@@ -4,13 +4,13 @@ import com.google.gson.annotations.SerializedName;
 
 public class Movie {
     @SerializedName("adult")
-    Boolean adult;
+    private Boolean adult;
 
     @SerializedName("backdrop_path")
-    String backdropPath;
+    private String backdropPath;
 
     @SerializedName("belongs_to_collection")
-    Object belongsToCollection;
+    private Object belongsToCollection;
 
     public Movie(Boolean adult, String backdropPath, Object belongsToCollection, Integer budget, Object[] genres, String homepage, Integer id, String imdbID, String originalLanguage, String originalTitle, String overview, Integer popularity, Object[] productionCompanies, Object[] productionCountries, String releaseDate, Integer revenue, Integer runtime, Object[] spokenLanguages, String status, String tagline, String title, Boolean video, Integer voteAverage, Integer voteCount) {
         this.adult = adult;
@@ -40,67 +40,67 @@ public class Movie {
     }
 
     @SerializedName("budget")
-    Integer budget;
+    private Integer budget;
 
     @SerializedName("genres")
-    Object[] genres;
+    private Object[] genres;
 
     @SerializedName("homepage")
-    String homepage;
+    private String homepage;
 
     @SerializedName("id")
-    Integer id;
+    private Integer id;
 
     @SerializedName("imdb_id")
-    String imdbID;
+    private String imdbID;
 
     @SerializedName("original_language")
-    String originalLanguage;
+    private String originalLanguage;
 
     @SerializedName("original_title")
-    String originalTitle;
+    private String originalTitle;
 
     @SerializedName("overview")
-    String overview;
+    private String overview;
 
     @SerializedName("popularity")
-    Integer popularity;
+    private Integer popularity;
 
     @SerializedName("production_companies")
-    Object[] productionCompanies;
+    private Object[] productionCompanies;
 
     @SerializedName("production_countries")
-    Object[] productionCountries;
+    private Object[] productionCountries;
 
     @SerializedName("release_date")
-    String releaseDate;
+    private String releaseDate;
 
     @SerializedName("revenue")
-    Integer revenue;
+    private Integer revenue;
 
     @SerializedName("runtime")
-    Integer runtime;
+    private Integer runtime;
 
     @SerializedName("spoken_languages")
-    Object[] spokenLanguages;
+    private Object[] spokenLanguages;
 
     @SerializedName("status")
-    String status;
+    private String status;
 
     @SerializedName("tagline")
-    String tagline;
+    private String tagline;
 
     @SerializedName("title")
-    String title;
+    private String title;
 
     @SerializedName("video")
-    Boolean video;
+    private Boolean video;
 
     @SerializedName("vote_average")
-    Integer voteAverage;
+    private Integer voteAverage;
 
     @SerializedName("vote_count")
-    Integer voteCount;
+    private Integer voteCount;
 
     public Boolean getAdult() {
         return adult;
